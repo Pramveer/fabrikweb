@@ -1,8 +1,8 @@
 
-let mysqlConnection = require('../config/connection');
-let connection = mysqlConnection.connection;
+var mysqlConnection = require('../config/connection');
+var connection = mysqlConnection.connection;
 
-let renderDashBoard = (req, res, next) => {
+var renderDashBoard = (req, res, next) => {
     res.render('index', { title: 'Express' });
 };
 

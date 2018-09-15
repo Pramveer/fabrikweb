@@ -1,13 +1,13 @@
-let express = require('express');
-let bodyParser = require('body-parser');
-let cookieParser = require('cookie-parser');
+var express = require('express');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var ejs = require('ejs');
 var path = require('path');
-// let session = require('express-session');
+// var session = require('express-session');
 
-let app = express();
+var app = express();
 
-let userRoute = require('./server/routes/userRoutes');
+var userRoute = require('./server/routes/userRoutes');
 
 app.set('port', process.env.PORT || 3000);
 app.set('views',path.join(__dirname, 'views'));
