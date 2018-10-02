@@ -18,5 +18,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 app.get('/', userRoute.renderDashBoard);
+app.get('/index', userRoute.renderDashBoard);
+app.get('/product', userRoute.renderProduct);
+app.get('/signin', userRoute.renderSignin);
+app.get('/signup', userRoute.renderSignUp);
+app.get('/cart', userRoute.renderItem);
 
 module.exports = app;

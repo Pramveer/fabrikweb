@@ -1,0 +1,245 @@
+﻿<html>
+	<%- include header.ejs %>
+	    <style>
+		.sec-banner img{
+			max-height: 270px;
+		}
+		a{
+			text-decoration: none;
+		}
+		#carousel-slider {
+			background-color: #fbfbfb;
+		}
+		#carousel-slider img{
+			min-height: 300px;
+			height: calc(100vh - 200px);
+			//width:100vw;
+			margin:auto;
+		}
+		#txtSearchItem{
+			max-width: 400px;
+			width:calc(100vw - 500px);
+			font-size:15px;
+			border:none;
+			padding:4px 10px;
+			border-bottom:1px solid #BBB2B2;
+			border-left:1px solid #BBB2B2;
+			border-bottom-left-radius:3px;
+			color:gray;
+		}
+
+		
+        .cart-container {
+            background:lightgray;
+        }
+        .cart-Item-container {
+            background:white;
+            color:black;
+            margin:0px 10px;
+        }
+        .cart-Items {
+            border-right:2px solid lightgray;
+        }
+        .cart-Total-Price {
+            min-height:100px;
+        }
+        .cart-Item-List {
+            border-bottom:2px solid lightgray;
+            padding:10px 10px;
+        }
+            .cart-Item-List label {
+                font-weight: normal;
+                display: inline-block;
+            }
+        .cart-Item-ImgWrapper {
+                border-right:1px solid lightgray;
+                padding:5px;
+        }
+            .cart-Item-ImgWrapper img {
+                width:100%;
+                background:lightgray;
+                margin:auto;
+            }
+
+        .cart-Item-DetailWrapper {
+
+        }
+        .cart-ProductHeading {
+            font-size:1.3em;
+            border-bottom:1px solid #1c2662;
+        }
+            .cart-ProductHeading a {
+                color:#1c2662;
+            }
+        #cart-ProductDesc {
+        }
+        .cart-ProdSellerInfo {
+        }
+            .cart-ProdSellerInfo label,
+            .cart-ProductPrice label {
+                font-weight: normal;
+                display:inline-block;
+            }
+
+        .cart-Item-PriceDetailWrapper {
+        }
+            .cart-Item-PriceDetailWrapper .productDiscount {
+                min-width:40%;
+                color:#0a2360;
+                font-size:1em;
+            }
+            .cart-Item-PriceDetailWrapper .productDiscPrice {
+                font-size:1em;
+                color:#0a2360;
+            }
+        .cart-SkipButtonWrapper input[type="button"] {
+            background: none;
+            display: inline-block;
+            text-transform:uppercase;
+            font-weight:bold;
+            font-size:.9em;
+            color:#0a2360;
+        }
+        .cart-SkipButtonWrapper input[type="button"]:hover {
+            text-decoration:underline;
+
+        }
+        .productDeliveryTag {
+            color:#0a2360;
+        }
+        .productDeliveryPrice {
+            color:#0a2360;
+            vertical-align:bottom;
+        }
+        .border-b-1 {
+            border-bottom:1px solid lightgray;
+        }
+        .cart-Amount {
+            padding:10px 10px;
+            min-height:inherit;
+        }
+            .cart-Amount label {
+                font-weight:normal;
+                display:inline-block;
+            }
+        .cart-Amount h3{
+            font-size:1.3em;
+            border-bottom:1px solid #1c2662;
+            color:#1c2662;
+        }
+    </style>
+
+    <section>
+        <div class="container-fluid cart-container">
+            <div class="row cart-Item-container" id="">
+                <div class="col-lg-8 col-md-8 cart-Items">
+                    <!--Item 1-->
+                    <div class="row cart-Item-List">
+                        <h3 id="lblProductHeading" class="cart-ProductHeading p-b-5 m-b-5"><a href="#">Prodcut 1</a></h3>
+                        <div class="col-lg-2 col-md-2 cart-Item-ImgWrapper">
+                            <img src="images/product-03.jpg" id="imgProcuct" class="p-all-5" />
+                        </div>
+                        <div class="col-lg-7 col-md-7 cart-Item-DetailWrapper p-b-10">
+                            <p id="cart-ProductDesc" class="p-l-5">Summerized info of product...</p>
+                            <div class="cart-ProdSellerInfo">
+                                <label class="p-l-5" id="lblSeller">Seller : </label>
+                                <label class="" id="lblSellerDetail">ABC Shop</label>
+                            </div>
+                            <div class="cart-ProductPrice p-b-5">
+                                <label class=" p-l-5" id="Label1">MRP : </label>
+                                <label class="" id="lblProductPrice">500.00</label>
+                            </div>
+                            <div id="Div5">
+                                <label class="p-b-5 p-l-5" id="Label12">Delivery in </label>
+                                <label class="p-b-5" id="Label13">3-4</label>
+                                <label class="p-b-5" id="Label14">Days</label>
+                            </div>
+                            <div id="Div6">
+                                <label class="p-b-5 p-l-5" id="Label19">Delivery Charge : </label>
+                                <label class="p-b-5" id="Label20">50.00</label>
+                            </div>
+
+                            <div id="Div3" class="cart-SkipButtonWrapper">
+                                <input type="button" id="btnSaveForLater" class="p-r-10" value="Save For Later"/>
+                                <input type="button" id="btnRemove" value="Remove"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 cart-Item-PriceDetailWrapper">
+                            <div class="row">   
+                                <label class="col-lg-5 col-md-5 productDiscount" id="Label2">Discount</label>
+                                <label class="col-lg-7 col-md-7 productDiscPrice"id="Label3">Price</label>
+                            </div>
+                            <div class="row m-b-10">
+                                <label class="col-lg-5 col-md-5 productDiscount" id="lblProductDiscount">3%</label>
+                                <label class="col-lg-7 col-md-7  productDiscPrice"id="lblProductDiscPrice">485.00</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Item 2-->
+                    <div class="row cart-Item-List">
+                        <h3 id="H1" class="cart-ProductHeading p-b-5 m-b-5"><a href="#">Prodcut 1</a></h3>
+                        <div class="col-lg-2 col-md-2 cart-Item-ImgWrapper">
+                            <img src="images/product-03.jpg" id="img1" class="p-all-5" />
+                        </div>
+                        <div class="col-lg-7 col-md-7 cart-Item-DetailWrapper p-b-10">
+                            <p id="P1" class="p-l-5">Summerized info of product...</p>
+                            <div id="Div1">
+                                <label class="p-l-5" id="Label4">Seller : </label>
+                                <label class="" id="Label5">ABC Shop</label>
+                            </div>
+                            <div id="Div2">
+                                <label class="p-b-5 p-l-5" id="Label6">MRP : </label>
+                                <label class="p-b-5" id="Label7">500.00</label>
+                            </div>
+                            <div id="Div4" class="cart-SkipButtonWrapper">
+                                <input type="button" id="Button1" class="p-r-10" value="Save For Later"/>
+                                <input type="button" id="Button2" value="Remove"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 cart-Item-PriceDetailWrapper">
+                            <div class="row">
+                                <label class="col-lg-5 col-md-5 productDiscount" id="Label8">Discount</label>
+                                <label class="col-lg-7 col-md-7 productDiscPrice"id="Label9">Payble Amt.</label>
+                            </div>
+                            <div class="row">
+                                <label class="col-lg-5 col-md-5 productDiscount" id="Label10">3%</label>
+                                <label class="col-lg-7 col-md-7 productDiscPrice"id="Label11">485.00</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 row cart-Amount m-l-20">
+                    <div class="row p-l-5 p-t-10">
+                        <h3 class="p-b-5">Price Detail</h3>
+                    </div>
+                    <div class="row p-l-5 p-t-10">
+                        <div class="col-lg-8 col-md-7">
+                            <label >Item Amt.</label>
+                            <label id="lblTotalCart">(2 items)</label> : 
+                        </div>
+                        <div class="col-lg-4 col-md-5">
+                            <label id="lblTotalAmount">5000.00</label>
+                        </div>
+                    </div>
+                    <div class="row p-l-5 p-t-10">
+                        <div class="col-lg-8 col-md-7 border-b-1">
+                            <label >Delivery Amt.</label> : 
+                        </div>
+                        <div class="col-lg-4 col-md-5 border-b-1">
+                            <label id="lblTotalDeliveryAmt">50.00</label>
+                        </div>
+                    </div>
+                    <div class="row p-l-5 p-t-10">
+                        <div class="col-lg-8 col-md-7">
+                            <label>Total Amount</label> : 
+                        </div>
+                        <div class="col-lg-4 col-md-5">
+                            <label id="Label15">5050.00</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<%- include footer.ejs %>
+</html>

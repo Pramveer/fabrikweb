@@ -1,0 +1,303 @@
+﻿  <meta charset="utf-8"/>
+  <title>FabrixHill - Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	
+	<script src="script/jquery.min.js"></script>
+	<script src="script/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/general.css"/>
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+<style rel="text/css">
+		/*----------------------*/
+		.sec-banner img{
+			max-height: 270px;
+		}
+		a{
+			text-decoration: none;
+		}
+		#carousel-slider {
+			background-color: #fbfbfb;
+		}
+		#carousel-slider img{
+			min-height: 300px;
+			height: calc(100vh - 200px);
+			//width:100vw;
+			margin:auto;
+		}
+		#txtSearchItem{
+			max-width: 400px;
+			width:calc(100vw - 500px);
+			font-size:15px;
+			border:none;
+			padding:4px 10px;
+			border-bottom:1px solid #BBB2B2;
+			border-left:1px solid #BBB2B2;
+			border-bottom-left-radius:3px;
+			color:gray;
+		}
+		/*----------------------*/
+		.sidenav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 55px;
+			right: 0;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 30px;
+			border: 1px solid #E4E4E4;
+			background-color: #f1f1f1;
+		}
+
+		.sidenav a {
+			padding: 4px 4px 4px 20px;
+			text-decoration: none !important;
+			font-size: 15px;
+			color: black;
+			display: block;
+			transition: 0.3s;
+		}
+
+		.sidenav a:hover {
+			color: #250887;
+			background-color:#E0E0E0;
+		}
+
+		.sidenav .closebtn {
+			line-height:1; 
+			position: absolute;
+			top: 0;
+			right: 0px;
+			font-size: 28px;
+			margin-left: 50px;
+			padding: 2px 8px;
+			//border:2px solid #f1f1f1;		}
+
+		.sidenav .closebtn:hover {
+			//border: 2px solid #e40707;			
+			color:#e40707;
+			transition: 0.3s;
+		}
+		
+		.content-container-1{
+			overflow: hidden;
+			margin:10px 30px;
+			position:relative;
+			padding:20px 0px;
+		}
+		.content-container-1 .img-rotator-left{
+			position:absolute;
+			top: calc(50% - 15px);
+			left: 1px;
+		}
+		.content-container-1 .img-rotator-right{
+			position:absolute;
+			top: calc(50% - 15px);
+			right: 8px;
+		}
+		
+		.content-container-1 img:hover,
+		.content-container-1 img:hover{
+			cursor: pointer;
+		}
+
+		.content-container-1 .c1-content{
+			width:calc(((100vw - 60px) / 5) - 8px);
+			border:1px solid #8A8383;
+			background-color:#f1f1f1;
+			overflow: hidden;
+		}
+		
+		.content-container-1 .c1-content>img{
+			width:240px;
+			margin-left:6px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}
+		}
+		.c1-content {
+			position:relative;
+		}
+		.item-like{
+			width:20px;
+			height:20px;
+			position: absolute;
+			right:10px;
+			top:10px;
+			background-color:gray;
+			//display: none;
+		}
+		.item-addToCart{
+			width:100%;
+			height:30px;
+			position: absolute;
+			left:0px;
+			bottom:0px;
+			background-color:gray;
+			//display: none;
+		}
+	</style>
+	<script>
+	  $( function() {
+		  /*-------------------------------*/
+		  function runEffect() {
+		  var selectedEffect = "slide";
+
+		  var options = {};
+		  if ( selectedEffect === "scale" ) {
+			options = { percent: 50 };
+		  } else if ( selectedEffect === "size" ) {
+			options = { to: { width: 200, height: 60 } };
+		  }
+		  $( "#txtSearchItem" ).toggle( selectedEffect, options, 500 );
+		};
+
+		$( "#imgSearchToggle" ).on( "click", function() {
+		  runEffect();
+		});
+		/*-------------------------------*/
+		$( ".banner-container a" ).on( "hover", function() {
+			
+		});		
+		  
+		$(".content-container-1").hover(function() {
+				$(".img-rotator-left").removeClass("dis-none");
+				$(".img-rotator-right").removeClass("dis-none");
+		}, function() {
+				$(".img-rotator-left").addClass("dis-none");
+				$(".img-rotator-right").addClass("dis-none");
+		});
+		
+		  function ToggleContentContainer(){
+			  	if($("#c1-content-container-1").hasClass("dis-block")){					
+					$("#c1-content-container-1").removeClass("dis-block");
+					$("#c1-content-container-1").addClass("dis-none");
+					$("#c1-content-container-2").removeClass("dis-none");
+					$("#c1-content-container-2").addClass("dis-block");	
+				}
+				else if($("#c1-content-container-2").hasClass("dis-block")){
+					$("#c1-content-container-2").removeClass("dis-block");
+					$("#c1-content-container-2").addClass("dis-none");
+					$("#c1-content-container-1").removeClass("dis-none");
+					$("#c1-content-container-1").addClass("dis-block");
+				}
+
+		  }
+			$(".img-rotator-left").click(function() {
+				ToggleContentContainer();
+			});		  
+			$(".img-rotator-right").click(function() {
+				ToggleContentContainer();
+			});		  
+
+	  });
+  </script>
+	<script>
+		function openNav() {
+			document.getElementById("login-sidenav").style.width = "250px";
+			//document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+		}
+
+		function closeNav() {
+			document.getElementById("login-sidenav").style.width = "0";
+			//document.body.style.backgroundColor = "white";
+		}
+		
+		/*--------------------*/
+		function OpenProductWindow(){
+			alert("working");
+			window.open("/product");
+		}
+
+	</script>
+
+	<header class="header-v2">
+		<!-- Header desktop -->
+		<div class="container-menu-desktop trans-03">
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop p-l-25">
+					
+					<!-- Logo desktop -->		
+					<a href="/index" class="logo">
+						<!--<img src="images/icons/logo-01.png" alt="FabrixHill">-->
+						<h1 style="color:black; font-size:2em;"><b>Fabrix</b>hill</h1>
+					</a>
+					
+					<!-- Icon header -->
+					<div class="wrap-icon-header flex-w flex-r-m h-full">
+						<div class="flex-c-m h-full">
+							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 ">
+								<input type="text" id="txtSearchItem" placeholder="Search Items..."/> 
+							</div>
+						</div>
+
+						<div class="flex-c-m h-full p-r-24">
+							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
+								<i class="glyphicon glyphicon-search" id="imgSearchToggle" ></i>
+							</div>
+						</div>
+							
+						<div class="flex-c-m h-full p-l-18 p-r-25 bor5">
+							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 " onclick="openNav()">
+								<i class="glyphicon glyphicon-user"></i>
+							</div>
+						</div>
+							
+						<div class="flex-c-m h-full p-lr-19">
+							<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti" data-notify="2">
+								<i class="	glyphicon glyphicon-shopping-cart"></i>
+							</div>
+						</div>
+					</div>
+
+				</nav>
+			</div>	
+		</div>
+		
+		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo moblie -->		
+			<div class="logo-mobile">
+				<a href="/index"><img src="images/icons/logo-01.png" alt="IMG-LOGO"/></a>
+			</div>
+
+			<!-- Icon header -->
+			<div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
+				<div class="flex-c-m h-full p-r-10">
+					<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
+						<i class="zmdi zmdi-search"></i>
+					</div>
+				</div>
+
+				<div class="flex-c-m h-full p-lr-10 bor5">
+					<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
+						<i class="zmdi zmdi-shopping-cart"></i>
+					</div>
+				</div>
+			</div>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Modal Search -->
+	</header>

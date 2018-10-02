@@ -1,0 +1,119 @@
+﻿<html>
+	<%- include header.ejs %>
+	<style>
+		body{
+			min-height: 100wh;
+			background: rgba(255,255,255,1);
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(17%, rgba(255,255,255,1)), color-stop(91%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+		}
+
+		header{
+			border-bottom: 1px solid #BBB2B2;
+		}
+		form{
+			width:350px;
+			margin:5px auto;			
+		}
+		.login-wrapper{
+			display:block;
+			width:350px;
+			box-shadow: 0px 0px 1px 1px #BBB2B2;
+		}
+		.login-header-wrapper{
+			
+		}
+		.login-header-wrapper h3{
+			background-color:#E5E2E2;
+			color:black;
+		}
+		.login-userInfo{
+		}
+		.login-userInfo label{
+			display: inline-block;
+			color:black;
+			font-weight:lighter;
+		}
+		.login-userInfo a{
+			font-weight: bold;
+		}
+		
+		.login-content-wrapper{
+		}
+		.login-content-wrapper label{
+			display: inline-block;
+		}
+		.login-wrapper input{
+			border:1px solid gray;
+			border-radius: 3px;
+			display: block;
+			width:100%;
+		}
+		.login-password-wrapper{
+			display: none;
+		}
+		.login-button-wrapper{
+		}
+		.login-button-wrapper input[type="submit"]{
+			background:#ABA7A7;
+			color:black;
+		}
+		.login-button-wrapper input[type="submit"]:hover{
+			background: #3565D3;
+		}
+		.login-signup-wrapper{
+			
+		}
+		.login-signup-wrapper span{
+			display: block;
+			text-align: center;			
+		}
+		.login-signup-wrapper a{
+			
+		}
+		footer{
+			position:absolute;
+			bottom: 0px;
+			left:0px;
+			width:100vw;
+		}
+	</style>
+
+	<form>
+		<div class="login-wrapper m-lr-auto m-tb-10">
+			<div class="login-header-wrapper">
+				<h3 class="login-header p-tb-5 p-lr-10">Login</h3>
+			</div>
+			<div class="login-userInfo p-t-15 p-lr-10 dis-none">
+				<label id="lblSelectedEmailID">uniyal.rupesh@gmail.com</label>
+				<a href="#">Change</a>						
+			</div>
+			<div class="login-content-wrapper">
+				<div class="login-email-wrapper p-t-15 p-lr-10">
+					<label id="lblEmailID" for="txtEmailID">Email ID</label>
+					<input type="email" id="txtEmailID" class="p-tb-2 p-lr-10" placeholder="Ex:- abc@xyz.com">				
+				</div>
+				<div class="login-password-wrapper p-t-15 p-lr-10" >
+					<label id="lblPassword" for="txtPassword" >Password</label>
+					<a href="#">Forgot Password</a>
+					<input type="password" class="p-tb-2 p-lr-10" id="txtPassword">				
+				</div>
+			</div>
+			<div class="login-button-wrapper p-t-15 p-lr-10">
+					<input type="submit" class="p-tb-2 p-lr-10" value="Continue"> 
+			</div>
+			<div class="login-signup-wrapper p-tb-10 p-lr-10">
+				<span class="signup-fx">New to FabrixHill?
+				<a href="/signup" > Sign up here</a></span>
+			</div>
+		</div>
+		<div>
+		</div>
+	</form>
+	<%- include footer.ejs %>
+</html>

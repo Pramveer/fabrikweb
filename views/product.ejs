@@ -1,0 +1,170 @@
+﻿<html>
+	<%- include header.ejs %>
+		<style rel="text/css">
+				.sec-banner img{
+			max-height: 270px;
+		}
+		a{
+			text-decoration: none;
+		}
+		#carousel-slider {
+			background-color: #fbfbfb;
+		}
+		#carousel-slider img{
+			min-height: 300px;
+			height: calc(100vh - 200px);
+			//width:100vw;
+			margin:auto;
+		}
+		#txtSearchItem{
+			max-width: 400px;
+			width:calc(100vw - 500px);
+			font-size:15px;
+			border:none;
+			padding:4px 10px;
+			border-bottom:1px solid #BBB2B2;
+			border-left:1px solid #BBB2B2;
+			border-bottom-left-radius:3px;
+			color:gray;
+		}
+
+		#btnProductAddCart{
+			border-radius: 4px;
+			padding: 10px 10px;
+			background-color:#468244;
+		}
+		#btnProductAddCart:hover{
+			background-color: #156219;
+		}
+		
+		#productDetailWrapper{
+			background-color:lightgray;
+		}
+		#ddlProductSize{
+			padding: 4px 10px;
+		    width: 100%;
+		}
+	</style>
+
+	<section id="productDetailWrapper">
+		<div class="container-fluid">
+			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
+					<img src="images/icons/icon-close.png" alt="CLOSE">
+				</button>
+
+				<div class="row">
+					<div class="col-md-5 col-lg-5 p-b-30">
+						<div class="p-l-25 p-r-30 p-lr-0-lg">
+							<div class="wrap-slick3 flex-sb flex-w">
+								<div class="wrap-slick3-dots"></div>
+								<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+								<div class="slick3 gallery-lb">
+									<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+										<div class="wrap-pic-w pos-relative">
+											<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="item-slick3" data-thumb="images/product-detail-02.jpg">
+										<div class="wrap-pic-w pos-relative">
+											<img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="item-slick3" data-thumb="images/product-detail-03.jpg">
+										<div class="wrap-pic-w pos-relative">
+											<img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
+
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-03.jpg">
+												<i class="fa fa-expand"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-7 col-lg-7 p-b-30">
+						<div class="p-r-50 p-t-5 p-lr-0-lg">
+							<h4 class="mtext-105 cl2 js-name-detail p-b-14" id="productHeading">
+								Product Heading
+							</h4>
+
+							<span class="mtext-106 cl2" id="productPrice">
+								Rs. 500
+							</span>
+
+							<p class="stext-102 cl3 p-t-23" id="productDetail">
+								Detailed Information of selected product Item.
+							</p>
+							
+							<!--  -->
+							<div class="p-t-33">
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-203 flex-c-m respon6" id="lblProductSize">
+										Size
+									</div>
+
+									<div class="size-204 respon6-next">
+										<div class="rs1-select2 bor8 bg0">
+											<select class="js-select2" name="time" id="ddlProductSize">
+												<option>Choose an option</option>
+												<option>Size S</option>
+												<option>Size M</option>
+												<option>Size L</option>
+												<option>Size XL</option>
+											</select>
+											<div class="dropDownSelect2"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-203 flex-c-m respon6" id="lblItemColor">
+										Color
+									</div>
+								</div>
+
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-204 flex-w flex-m respon6-next">
+										<div class="wrap-num-product flex-w m-r-20 m-tb-10">
+											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+												<i class="fs-16 fa fa-minus"></i>
+											</div>
+
+											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+
+											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+												<i class="fs-16 fa fa-plus"></i>
+											</div>
+										</div>
+
+										<button class="flex-c-m stext-101 cl0 bg1 bor1 hov-btn1 p-lr-10 p-tb-5 trans-04 js-addcart-detail" id="btnProductAddCart">
+											Add to Cart
+										</button>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<%- include footer.ejs %>
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="script/slick-custom.js"></script>
+
+</html>

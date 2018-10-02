@@ -1,0 +1,126 @@
+﻿<html>
+	<%- include header.ejs %>
+	<style>
+		body{
+			min-height: 100wh;
+			background: rgba(255,255,255,1);
+			background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(17%, rgba(255,255,255,1)), color-stop(91%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+			background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(246,246,246,1) 91%, rgba(237,237,237,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+		}
+		header{
+			border-bottom: 1px solid #BBB2B2;
+		}
+		
+		form{
+			width:350px;
+			margin:5px auto;			
+		}
+		.signup-wrapper{
+			display:block;
+			width:350px;
+			box-shadow: 0px 0px 1px 1px #BBB2B2;
+			margin:5px auto;
+			padding-bottom: 5px;
+		}
+		.signup-header-wrapper{
+			
+		}
+		signup-content-wrapper label{
+			font-weight: normal;
+		}
+		.signup-header-wrapper h3{
+			background-color:#E5E2E2;
+			color:black;
+		}
+		.signup-userInfo{
+			padding:0px 10px;
+		}
+		.signup-userInfo label{
+			display: inline-block;
+			color:black;
+			font-weight:lighter;
+			padding-top:3px;
+		}
+		.signup-userInfo a{
+			font-weight: bold;
+		}
+		
+		.signup-content-wrapper{
+		}
+		.signup-content-wrapper label{
+			display: inline-block;
+		}
+		.signup-wrapper input{
+			border:1px solid gray;
+			border-radius: 3px;
+			display: block;
+			width:100%;
+		}
+		.signup-password-wrapper{
+		}
+		.signup-button-wrapper{
+		}
+		.signup-button-wrapper input[type="submit"]{
+			background:#ABA7A7;
+			color:black;
+		}
+		.signup-button-wrapper input[type="submit"]:hover{
+			background: #3565D3;
+		}
+		.signup-signup-wrapper{
+			
+		}
+		.signup-signup-wrapper span{
+			display: block;
+			text-align: center;
+			
+		}
+		.signup-signup-wrapper a{
+			
+		}
+
+	</style>
+	<form>
+		<div class="signup-wrapper m-lr-auto m-tb-5">
+			<div class="signup-header-wrapper">
+				<h3 class="signup-header p-tb-5 p-lr-10">Create Account</h3>
+			</div>
+			<div class="signup-content-wrapper">
+				<div class="signup-name-wrapper p-t-15 p-lr-10">
+					<label id="lblUserName" for="txtUserName">Your Name</label>
+					<input type="text" id="txtUserName" class="p-tb-2 p-lr-10" placeholder="Ex :- John" required="required">				
+				</div>
+				<div class="signup-mobile-wrapper p-t-15 p-lr-10">
+					<label id="lblMobileNumber" for="txtMobileNumber">Mobile Number</label>
+					<input type="text" id="txtMobileNumber" class="p-tb-2 p-lr-10" placeholder="+91 " required="required">
+				</div>
+				<div class="signup-mobile-wrapper p-t-15 p-lr-10">
+					<label id="lblEmailAddress" for="txtEmailAddress">Email (optional)</label>
+					<input type="email" id="txtEmailAddress" class="p-tb-2 p-lr-10" placeholder="Ex :- abc@gmail.com">				
+				</div>
+				<div class="signup-password-wrapper p-t-15 p-lr-10">
+					<label id="lblPassword" for="txtPassword" >Password</label>
+					<input type="password" class="p-tb-2 p-lr-10" id="txtPassword" required="required">				
+					<span class="float-r">Password must be at least 6 character.</span>
+				</div>
+				<div class="signup-repass-wrapper p-t-25 p-lr-10">
+					<label id="lblRetypePassword" for="txtRetypePassword" >Retype Password</label>
+					<input type="password" id="txtRetypePassword" class="p-tb-2 p-lr-10" required="required">				
+				</div>
+			</div>
+			<div class="signup-button-wrapper p-t-25 p-lr-10">
+					<input type="submit" class="p-tb-2 p-lr-10" value="Sign Up"> 
+			</div>
+			<div class="signup-login-wrapper p-t-15 p-lr-10">
+				<span class="signup-fx">Already have an account ?
+				<a href="/signin" > Sign in here</a></span>
+			</div>
+		</div>
+	</form>
+	<%- include header.ejs %>
+</html>
